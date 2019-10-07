@@ -1,0 +1,27 @@
+@startuml
+title Update Phase - Front-loaded PoP
+participant Alice
+participant Bob
+participant Carol
+participant Dave
+
+== Setup ==
+
+Dave -> Dave: z
+Alice -> Alice: y0,y1,y2
+Alice -> Bob: y1
+Alice -> Carol: y2
+
+== Update ==
+
+Alice <-> Bob: Commit
+Bob <-> Carol: Commit
+Carol <-> Dave: Commit
+
+Dave -> Carol: ACK
+Carol -> Bob: ACK
+Bob -> Alice: ACK
+
+Alice -> Dave: y0+y1+y2
+
+@enduml

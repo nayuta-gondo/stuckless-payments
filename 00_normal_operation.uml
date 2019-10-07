@@ -1,0 +1,29 @@
+@startuml
+title Normal Operation
+participant Alice
+participant Bob
+participant Carol
+participant Dave
+
+== Update ==
+
+Alice -> Bob: update_add_htlc
+Alice <-> Bob: Commit
+
+Bob -> Carol: update_add_htlc
+Bob <-> Carol: Commit
+
+Carol -> Dave: update_add_htlc
+Carol <-> Dave: Commit
+
+== Settlement ==
+
+Dave -> Carol: update_fulfill_htlc
+Carol -> Bob: update_fulfill_htlc
+Bob -> Alice: update_fulfill_htlc
+
+Dave <-> Carol: Commit
+Carol <-> Bob: Commit
+Bob <-> Alice: Commit
+
+@enduml

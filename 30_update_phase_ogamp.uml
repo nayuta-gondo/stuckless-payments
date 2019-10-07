@@ -1,0 +1,19 @@
+@startuml
+title Update Phase - OG AMP (single-path)
+participant Alice
+participant Bob
+participant Carol
+participant Dave
+
+== Update ==
+
+Alice -> Bob: update_add_htlc\n- A's PaymentHash\n- A's PreImage
+Alice <-> Bob: Commit
+
+Bob -> Carol: update_add_htlc\n- A's PaymentHash\n- A's PreImage
+Bob <-> Carol: Commit
+
+Carol -> Dave: update_add_htlc\n- A's PaymentHash\n- A's PreImage
+Carol <-> Dave: Commit
+
+@enduml

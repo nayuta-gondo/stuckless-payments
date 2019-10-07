@@ -1,0 +1,20 @@
+@startuml
+title Update Phase - Stuck
+participant Alice
+participant Bob
+participant Carol
+participant Dave
+
+== Update ==
+
+Alice -> Bob: update_add_htlc\n- D's PaymentHash
+Alice <-> Bob: Commit
+
+Bob -> Carol: update_add_htlc\n- D's PaymentHash
+'Bob <-> Carol: Commit
+Bob ->x Carol: Commit
+
+'Carol -> Dave: update_add_htlc\n- D's PaymentHash
+'Carol ->x Dave: Commit
+
+@enduml

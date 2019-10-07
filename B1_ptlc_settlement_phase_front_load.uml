@@ -1,0 +1,16 @@
+@startuml
+title Settlement Phase - Front-loaded PoP
+participant Alice
+participant Bob
+participant Carol
+participant Dave
+
+== Settlement ==
+
+Dave -> Alice: z
+
+Dave -> Carol: z+y0+y1
+Carol -> Bob: z+y0
+Bob -> Alice: z
+
+@enduml

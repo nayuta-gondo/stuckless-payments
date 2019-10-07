@@ -1,0 +1,21 @@
+@startuml
+title Update Phase
+participant Alice
+participant Bob
+participant Carol
+participant Dave
+
+== Setup ==
+
+Alice -> Alice: y0,y1,y2
+Alice -> Bob: y1
+Alice -> Carol: y2
+Alice -> Dave: y0+y1+y2
+
+== Update ==
+
+Alice <-> Bob: Commit
+Bob <-> Carol: Commit
+Carol <-> Dave: Commit
+
+@enduml

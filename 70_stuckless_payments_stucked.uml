@@ -1,0 +1,29 @@
+@startuml
+title Stuckless Payments - Stuck
+participant Alice
+participant Bob
+participant Carol
+participant Dave
+
+== Update ==
+
+Alice -> Bob: update_add_htlc
+Alice <-> Bob: Commit
+
+Bob -> Carol: update_add_htlc
+Bob <-> Carol: Commit
+
+Carol -> Dave: update_add_htlc
+Carol <-> Dave: Commit
+
+Dave -> Carol: ACK
+Carol -> Bob: ACK
+Bob -> Alice: ACK
+
+Alice -> Dave: Send A's PreImage
+
+== Settlement ==
+
+Dave ->x Alice: Send D's PreImage
+
+@enduml

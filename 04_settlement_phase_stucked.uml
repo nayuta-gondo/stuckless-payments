@@ -1,0 +1,15 @@
+@startuml
+title Settlement Phase - Stuck
+participant Alice
+participant Bob
+participant Carol
+participant Dave
+
+== Settlement ==
+
+Dave -> Carol: update_fulfill_htlc\n- D's PreImage
+Carol ->x Bob: update_fulfill_htlc\n- D's PreImage
+
+Dave <-> Carol: Commit
+
+@enduml

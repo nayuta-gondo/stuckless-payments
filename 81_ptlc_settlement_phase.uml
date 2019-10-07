@@ -1,0 +1,14 @@
+@startuml
+title Settlement Phase
+participant Alice
+participant Bob
+participant Carol
+participant Dave
+
+== Settlement ==
+
+Dave -> Carol: y0+y1
+Carol -> Bob: y0
+Bob -> Alice: (none)
+
+@enduml

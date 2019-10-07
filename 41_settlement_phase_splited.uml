@@ -1,0 +1,18 @@
+@startuml
+title Settlement Phase - Splited
+participant Alice
+participant Bob
+participant Carol
+participant Dave
+
+== Settlement ==
+
+Dave -> Carol: update_fulfill_htlc\n- A's PreImage
+Carol -> Bob: update_fulfill_htlc\n- A's PreImage
+Bob -> Alice: update_fulfill_htlc\n- A's PreImage
+
+Dave <-> Carol: Commit
+Carol <-> Bob: Commit
+Bob <-> Alice: Commit
+
+@enduml

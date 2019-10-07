@@ -1,0 +1,25 @@
+@startuml
+title Update Phase - Front-loaded PoP
+participant Alice
+participant Bob
+participant Carol
+participant Dave
+
+== Update ==
+
+Alice -> Bob: update_add_htlc\n- A's PaymentHash\n- D's PaymentHash
+Alice <-> Bob: Commit
+
+Bob -> Carol: update_add_htlc\n- A's PaymentHash\n- D's PaymentHash
+Bob <-> Carol: Commit
+
+Carol -> Dave: update_add_htlc\n- A's PaymentHash\n- D's PaymentHash
+Carol <-> Dave: Commit
+
+Dave -> Carol: ACK
+Carol -> Bob: ACK
+Bob -> Alice: ACK
+
+Alice -> Dave: Send A's PreImage
+
+@enduml
