@@ -7,10 +7,10 @@ participant Dave
 
 == Settlement ==
 
-Dave -> Alice: z
+Dave -> Alice: y0
 
-Dave -> Carol: z+y0+y1
-Carol -> Bob: z+y0
-Bob -> Alice: z
+Dave -> Carol: y0+y1+y2
+Carol -> Bob: y0+y1
+Bob -> Alice: y0
 
 @enduml
