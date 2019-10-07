@@ -1,5 +1,5 @@
 @startuml
-title Update Phase - Front-loaded PoP
+title Update Phase
 participant Alice
 participant Bob
 participant Carol

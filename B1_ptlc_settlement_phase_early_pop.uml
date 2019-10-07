@@ -1,5 +1,5 @@
 @startuml
-title Settlement Phase - Front-loaded PoP
+title Settlement Phase - Early PoP
 participant Alice
 participant Bob
 participant Carol

@@ -7,11 +7,12 @@ participant Dave
 
 == Setup ==
 
-Dave -> Dave: z
-Alice -> Alice: y0,y1,y2
+Alice -> Alice: Genarate y1,y2,y3
+Dave -> Dave: Genarate y0
 Alice -> Bob: y1
 Alice -> Carol: y2
-Alice -> Dave: y0+y1+y2
+Alice -> Dave: y3
+Alice -> Dave: y1+y2+y3
 
 == Update ==
 

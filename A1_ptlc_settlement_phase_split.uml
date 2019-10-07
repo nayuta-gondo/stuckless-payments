@@ -1,5 +1,5 @@
 @startuml
-title Settlement Phase - Split
+title Settlement Phase
 participant Alice
 participant Bob
 participant Carol
