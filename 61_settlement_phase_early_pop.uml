@@ -7,14 +7,14 @@ participant Dave
 
 == Settlement ==
 
-Dave -> Alice: Send D's PreImage
+Dave -> Alice: send D's preimage
 
-Dave -> Carol: update_fulfill_htlc\n- A's PreImage\n- D's PreImage
-Carol -> Bob: update_fulfill_htlc\n- A's PreImage\n- D's PreImage
-Bob -> Alice: update_fulfill_htlc\n- A's PreImage\n- D's PreImage
+Dave -> Carol: update_fulfill_htlc\n- A's preimage\n- D's preimage
+Carol -> Bob: update_fulfill_htlc\n- A's preimage\n- D's preimage
+Bob -> Alice: update_fulfill_htlc\n- A's preimage\n- D's preimage
 
-Dave <-> Carol: Commit
-Carol <-> Bob: Commit
-Bob <-> Alice: Commit
+Dave <-> Carol: commit
+Carol <-> Bob: commit
+Bob <-> Alice: commit
 
 @enduml

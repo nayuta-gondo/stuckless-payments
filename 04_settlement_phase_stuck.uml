@@ -7,9 +7,9 @@ participant Dave
 
 == Settlement ==
 
-Dave -> Carol: update_fulfill_htlc\n- D's PreImage
-Carol ->x Bob: update_fulfill_htlc\n- D's PreImage
+Dave -> Carol: update_fulfill_htlc\n- D's preimage
+Carol ->x Bob: update_fulfill_htlc\n- D's preimage
 
-Dave <-> Carol: Commit
+Dave <-> Carol: commit
 
 @enduml

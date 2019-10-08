@@ -7,13 +7,13 @@ participant Dave
 
 == Update ==
 
-Alice -> Bob: update_add_htlc\n- A's PaymentHash\n- A's PreImage
-Alice <-> Bob: Commit
+Alice -> Bob: update_add_htlc\n- A's payment hash\n- A's preimage
+Alice <-> Bob: commit
 
-Bob -> Carol: update_add_htlc\n- A's PaymentHash\n- A's PreImage
-Bob <-> Carol: Commit
+Bob -> Carol: update_add_htlc\n- A's payment hash\n- A's preimage
+Bob <-> Carol: commit
 
-Carol -> Dave: update_add_htlc\n- A's PaymentHash\n- A's PreImage
-Carol <-> Dave: Commit
+Carol -> Dave: update_add_htlc\n- A's payment hash\n- A's preimage
+Carol <-> Dave: commit
 
 @enduml

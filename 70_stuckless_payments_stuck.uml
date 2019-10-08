@@ -8,22 +8,22 @@ participant Dave
 == Update ==
 
 Alice -> Bob: update_add_htlc
-Alice <-> Bob: Commit
+Alice <-> Bob: commit
 
 Bob -> Carol: update_add_htlc
-Bob <-> Carol: Commit
+Bob <-> Carol: commit
 
 Carol -> Dave: update_add_htlc
-Carol <-> Dave: Commit
+Carol <-> Dave: commit
 
 Dave -> Carol: ACK
 Carol -> Bob: ACK
 Bob -> Alice: ACK
 
-Alice -> Dave: Send A's PreImage
+Alice -> Dave: send A's preimage
 
 == Settlement ==
 
-Dave ->x Alice: Send D's PreImage
+Dave ->x Alice: send D's preimage
 
 @enduml

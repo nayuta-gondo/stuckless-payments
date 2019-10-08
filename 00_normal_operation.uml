@@ -8,13 +8,13 @@ participant Dave
 == Update ==
 
 Alice -> Bob: update_add_htlc
-Alice <-> Bob: Commit
+Alice <-> Bob: commit
 
 Bob -> Carol: update_add_htlc
-Bob <-> Carol: Commit
+Bob <-> Carol: commit
 
 Carol -> Dave: update_add_htlc
-Carol <-> Dave: Commit
+Carol <-> Dave: commit
 
 == Settlement ==
 
@@ -22,8 +22,8 @@ Dave -> Carol: update_fulfill_htlc
 Carol -> Bob: update_fulfill_htlc
 Bob -> Alice: update_fulfill_htlc
 
-Dave <-> Carol: Commit
-Carol <-> Bob: Commit
-Bob <-> Alice: Commit
+Dave <-> Carol: commit
+Carol <-> Bob: commit
+Bob <-> Alice: commit
 
 @enduml

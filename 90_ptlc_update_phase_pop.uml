@@ -16,8 +16,8 @@ Alice -> Dave: y1+y2+y3
 
 == Update ==
 
-Alice <-> Bob: Commit
-Bob <-> Carol: Commit
-Carol <-> Dave: Commit
+Alice <-> Bob: commit
+Bob <-> Carol: commit
+Carol <-> Dave: commit
 
 @enduml
