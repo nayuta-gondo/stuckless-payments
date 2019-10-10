@@ -1,5 +1,5 @@
 @startuml
-title Normal Operation
+title Payment Sequence
 participant Alice
 participant Bob
 participant Carol

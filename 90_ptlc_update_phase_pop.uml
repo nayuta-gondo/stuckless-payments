@@ -7,8 +7,8 @@ participant Dave
 
 == Setup ==
 
-Alice -> Alice: Genarate y1,y2,y3
-Dave -> Dave: Genarate y0
+Alice -> Alice: genarate y1,y2,y3
+Dave -> Dave: genarate y0
 Alice -> Bob: y1
 Alice -> Carol: y2
 Alice -> Dave: y3
