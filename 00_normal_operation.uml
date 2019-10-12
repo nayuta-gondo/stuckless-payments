@@ -1,5 +1,6 @@
 @startuml
 title Payment Sequence
+hide footbox
 participant Alice
 participant Bob
 participant Carol
@@ -7,20 +8,20 @@ participant Dave
 
 == Update ==
 
-Alice -> Bob: update_add_htlc
+Alice -> Bob: update_add_htlc\n- D's payment hash
 Alice <-> Bob: commit
 
-Bob -> Carol: update_add_htlc
+Bob -> Carol: update_add_htlc\n- D's payment hash
 Bob <-> Carol: commit
 
-Carol -> Dave: update_add_htlc
+Carol -> Dave: update_add_htlc\n- D's payment hash
 Carol <-> Dave: commit
 
 == Settlement ==
 
-Dave -> Carol: update_fulfill_htlc
-Carol -> Bob: update_fulfill_htlc
-Bob -> Alice: update_fulfill_htlc
+Dave -> Carol: update_fulfill_htlc\n- D's preimage
+Carol -> Bob: update_fulfill_htlc\n- D's preimage
+Bob -> Alice: update_fulfill_htlc\n- D's preimage
 
 Dave <-> Carol: commit
 Carol <-> Bob: commit

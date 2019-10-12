@@ -1,5 +1,6 @@
 @startuml
 title Settlement Phase - OG AMP (single-path)
+hide footbox
 participant Alice
 participant Bob
 participant Carol

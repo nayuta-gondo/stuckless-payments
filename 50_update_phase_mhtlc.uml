@@ -1,5 +1,6 @@
 @startuml
 title Update Phase - MHTLC
+hide footbox
 participant Alice
 participant Bob
 participant Carol

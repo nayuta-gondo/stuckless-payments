@@ -1,5 +1,6 @@
 @startuml
 title Settlement Phase - Stuck
+hide footbox
 participant Alice
 participant Bob
 participant Carol

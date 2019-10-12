@@ -1,5 +1,6 @@
 @startuml
 title Setup/Update Phase
+hide footbox
 participant Alice
 participant Bob
 participant Carol
