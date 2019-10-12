@@ -1,0 +1,40 @@
+@startuml
+!pragma teoz true
+title Payment Sequence - Early PoP
+hide footbox
+participant Alice
+participant Bob
+participant Carol
+participant Dave
+
+== Update ==
+
+Alice -> Bob: update_add_htlc(h_A, h_D)
+
+Alice <-> Bob: commit
+& Bob -> Carol: update_add_htlc(h_A, h_D)
+
+Bob <-> Carol: commit
+& Carol -> Dave: update_add_htlc(h_A, h_D)
+
+Carol <-> Dave: commit
+
+Dave -> Carol: ACK
+& Carol -> Bob: ACK
+& Bob -> Alice: ACK
+
+Alice -> Dave: send r_A
+
+== Settlement ==
+
+Dave -> Alice: send r_D
+
+Dave -> Carol: update_fulfill_htlc(r_A, r_D)
+& Carol -> Bob: update_fulfill_htlc(r_A, r_D)
+& Bob -> Alice: update_fulfill_htlc(r_A, r_D)
+
+Dave <-> Carol: commit
+& Carol <-> Bob: commit
+& Bob <-> Alice: commit
+
+@enduml

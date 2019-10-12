@@ -1,6 +1,6 @@
 @startuml
 !pragma teoz true
-title Payment Sequence
+title Settlement Phase - Stuck
 hide footbox
 participant Alice
 participant Bob
@@ -22,11 +22,6 @@ Carol <-> Dave: commit
 == Settlement ==
 
 Dave -> Carol: update_fulfill_htlc(r_D)
-& Carol -> Bob: update_fulfill_htlc(r_D)
-& Bob -> Alice: update_fulfill_htlc(r_D)
-
-Dave <-> Carol: commit
-& Carol <-> Bob: commit
-& Bob <-> Alice: commit
+& Carol ->x Bob: update_fulfill_htlc(r_D)
 
 @enduml
