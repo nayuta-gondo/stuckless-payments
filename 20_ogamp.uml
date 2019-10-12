@@ -1,5 +1,5 @@
 @startuml
-title Update Phase - OG AMP (single-path)
+'title Payment Sequence - OG AMP (single-path)
 hide footbox
 participant Alice
 participant Bob
@@ -16,5 +16,17 @@ Bob <-> Carol: commit
 
 Carol -> Dave: update_add_htlc\n- A's payment hash\n- A's preimage
 Carol <-> Dave: commit
+
+newpage
+
+== Settlement ==
+
+Dave -> Carol: update_fulfill_htlc\n- A's preimage
+Carol -> Bob: update_fulfill_htlc\n- A's preimage
+Bob -> Alice: update_fulfill_htlc\n- A's preimage
+
+Dave <-> Carol: commit
+Carol <-> Bob: commit
+Bob <-> Alice: commit
 
 @enduml
