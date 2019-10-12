@@ -1,5 +1,5 @@
 @startuml
-title Update Phase
+title Setup/Update Phase
 participant Alice
 participant Bob
 participant Carol
@@ -16,8 +16,13 @@ Alice -> Dave: y0+y1+y2+y3
 
 == Update ==
 
+Alice -> Bob: update_add_ptlc
 Alice <-> Bob: commit
+
+Bob -> Carol: update_add_ptlc
 Bob <-> Carol: commit
+
+Carol -> Dave: update_add_ptlc
 Carol <-> Dave: commit
 
 @enduml
