@@ -1,5 +1,6 @@
 @startuml
-title Setup/Update Phase - PoP
+!pragma teoz true
+title Payment Sequence
 hide footbox
 participant Alice
 participant Bob
@@ -8,22 +9,29 @@ participant Dave
 
 == Setup ==
 
-Alice -> Alice: genarate y1,y2,y3
-Dave -> Dave: genarate y0
+Alice -> Alice: genarate y0,y1,y2,y3
+Alice -> Alice: y0
 Alice -> Bob: y1
 Alice -> Carol: y2
 Alice -> Dave: y3
-Alice -> Dave: y1+y2+y3
+Alice -> Dave: y0+y1+y2+y3
 
 == Update ==
 
 Alice -> Bob: update_add_ptlc
+
 Alice <-> Bob: commit
+& Bob -> Carol: update_add_ptlc
 
-Bob -> Carol: update_add_ptlc
 Bob <-> Carol: commit
+& Carol -> Dave: update_add_ptlc
 
-Carol -> Dave: update_add_ptlc
 Carol <-> Dave: commit
+
+== Settlement ==
+
+Dave -> Carol: y0+y1+y2
+& Carol -> Bob: y0+y1
+& Bob -> Alice: y0
 
 @enduml
