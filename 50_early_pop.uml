@@ -27,7 +27,7 @@ Alice -> Dave: send r_A
 
 == Settlement ==
 
-Dave -> Alice: send r_D
+Dave --> Alice: send r_D
 
 Dave -> Carol: update_fulfill_htlc(r_A, r_D)
 & Carol -> Bob: update_fulfill_htlc(r_A, r_D)

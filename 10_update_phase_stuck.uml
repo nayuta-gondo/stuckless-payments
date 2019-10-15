@@ -14,7 +14,7 @@ Alice -> Bob: update_add_htlc(h_D)
 Alice <-> Bob: commit
 & Bob -> Carol: update_add_htlc(h_D)
 
-Bob ->x Carol: commit
+Bob x<->x Carol: commit
 
 newpage
 

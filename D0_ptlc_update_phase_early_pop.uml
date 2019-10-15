@@ -36,7 +36,7 @@ Alice -> Dave: y1+y2+y3
 
 == Settlement ==
 
-Dave -> Alice: y0
+Dave --> Alice: y0
 
 Dave -> Carol: y0+y1+y2
 & Carol -> Bob: y0+y1

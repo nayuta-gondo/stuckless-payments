@@ -27,6 +27,6 @@ Alice -> Dave: send r_A
 
 == Settlement ==
 
-Dave ->x Alice: send r_D
+Dave -->x Alice: send r_D
 
 @enduml
